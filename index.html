@@ -56,23 +56,24 @@
 <div class="form__inputs">
 <div class="form__inputs2" id="formulario">
 <form id="formAjax">
-  <div class="row mb-3">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">monto a pedir</label>
+    <div class="row mb-3">
+    <center><label for="inputEmail3" class="col-sm-2 col-form-label">monto a pedir</label></center>
 
-    <div class="col-sm-10 contain__inputs">
+    <center><div class="col-sm-10 contain__inputs">
       <input type="number" class="form-control inputs__form" id="montoPedir">
-    </div>
+    </div></center>
 
   </div>
   <div class="row mb-3">
-    <label for="inputPassword3" class="col-sm-2 col-form-label">numero de cuotas</label>
+    <center><label for="inputPassword3" class="col-sm-2 col-form-label">numero de cuotas</label></center>
 
-    <div class="col-sm-10 contain__inputs">
+    <center><div class="col-sm-10 contain__inputs">
       <input type="number" class="form-control inputs__form" id="numeroCuotas">
-    </div>
+    </div></center>
 
   </div>
-  <button type="submit" class="btn btn-primary">Comparar</button>
+  <center><button type="submit" class="btn btn-primary">Comparar</button></center>
+  <center><strong id="error" style="color:red;" class="blink_me"></strong></center>
 </form>
 </div>
 </div>
@@ -87,13 +88,15 @@
             localStorage.setItem('montop',$("#montoPedir").val());
             localStorage.setItem('numeroc',$("#numeroCuotas").val());
 
-
-
             var a = localStorage.getItem('montop');
             var b = localStorage.getItem('numeroc');
             
+            if(a>0 && a<30000000 && b>=2 && b<=48){
             var table = Generar_tabla(a,b);
             $("#formulario").html(table+"<a class='btn btn-primary' href='index.html' role='button'>calcular de nuevo</a>");
+            }else{
+            $("#error").html("monto o numero de cuotas incorrectos");
+            }
 
         });
 
