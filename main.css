@@ -54,3 +54,20 @@ button:focus{
 #mostrar_datos{
     text-align: center;
 }
+
+.blink_me {
+    animation: blinker 1s linear infinite;
+  }
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  #error {
+      display: block;
+  }
+  button {
+      margin-bottom: 1vw;
+  }
