@@ -135,13 +135,13 @@ function Calculadora(Valor,NCuotas){
 }
 //------Generador de tabla------//
 function Generar_tabla(Valor,NCuotas){
-    var mytable = '<table class="table"><thead class="thead-dark"><tr><th scope="col">Nombre entidad financiera</th><th scope="col">Valor de la cuota</th><th scope="col">Total del credito</th><th scope="col">Interes mensual</th><th scope="col">CAE</th></tr></thead><tbody>';
+    var mytable = '<div class="table-responsive"><table class="table"><thead class="thead-dark"><tr><th scope="col">Nombre entidad financiera</th><th scope="col">Valor de la cuota</th><th scope="col">Total del credito</th><th scope="col">Interes mensual</th><th scope="col">CAE</th></tr></thead><tbody>';
     for (var ROW of Calculadora(Valor,NCuotas)){  
         mytable += "<tr>";
         for (var COL of ROW){  mytable += "<td>" + COL + "</td>"; };
         mytable += "</tr>";
     };
-    mytable += "</tbody></table>";
+    mytable += "</tbody></table></div>";
 
     return mytable;
     //document.write(mytable);
