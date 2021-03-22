@@ -71,3 +71,6 @@ button:focus{
   button {
       margin-bottom: 1vw;
   }
+  input::placeholder {
+     text-align: center;
+  }
