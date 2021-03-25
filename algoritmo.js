@@ -148,7 +148,7 @@ function Banco_Ripley(Valor,NCuotas){
         if 		(NCuotas>=2  && NCuotas<=48) {return acortador(Nombre, 0.0228, Valor, NCuotas)}
         else{alert("Error");}
     }
-    else if (Valor>=8000001  && Valor<=1000000) {
+    else if (Valor>=8000001  && Valor<=10000000) {
         if 		(NCuotas>=2  && NCuotas<=48) {return acortador(Nombre, 0.0168, Valor, NCuotas)}
         else{alert("Error");}
     }
