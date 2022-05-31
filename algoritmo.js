@@ -77,7 +77,7 @@ function CMR(Valor, NCuotas){
         if 		(NCuotas>=2  && NCuotas<=48) {return acortador(Nombre, 0.0167, Valor, NCuotas)}
         else{alert("Error");}
     }
-    else{alert("Error");}
+    else{alert("Errosdr");}
 }
 //30.000.000
 function Banco_Estado(Valor,NCuotas){
